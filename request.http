@@ -1,0 +1,52 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "john"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "john"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY1NGRhZjM5ZWQ5NjA4MTRkYTcxZTEiLCJpYXQiOjE2NTA4NTcxODV9.cArzfvN4xccUOWxbD-U3qq7WRWtOMoilLMpo8vCYDPM
+
+{
+  "title": "My first post",
+  "description": "test",
+  "status": "TO DO"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY1NGRhZjM5ZWQ5NjA4MTRkYTcxZTEiLCJpYXQiOjE2NTA4NTcxODV9.cArzfvN4xccUOWxbD-U3qq7WRWtOMoilLMpo8vCYDPM
+
+
+###
+
+PUT http://localhost:5000/api/posts/6266064b6ffae116d834ed16
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY1NGRhZjM5ZWQ5NjA4MTRkYTcxZTEiLCJpYXQiOjE2NTA4NTM0MzN9.CI4PG_57Md5qFSVtjka7bQHQOR3b1-BqIsXKpC2Wl8w
+
+{
+  "title": "learn something",
+  "description": "coding",
+  "status": "DOING"
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/6266064b6ffae116d834ed16
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY1NGRhZjM5ZWQ5NjA4MTRkYTcxZTEiLCJpYXQiOjE2NTA4NTM0MzN9.CI4PG_57Md5qFSVtjka7bQHQOR3b1-BqIsXKpC2Wl8w
